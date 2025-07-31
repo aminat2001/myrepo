@@ -1,0 +1,260 @@
+/* ========== GLOBAL STYLES ========== */
+
+/* Reset default margin and padding for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Base body styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f7fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Container to center content and control max width */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 40px 0;
+}
+
+/* ========== NAVIGATION BAR ========== */
+
+/* Navigation wrapper */
+nav {
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px 0;
+}
+
+/* Horizontal nav menu */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+/* Style each nav link */
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+/* Change nav link color on hover */
+nav ul li a:hover {
+    color: #0077cc;
+}
+
+/* ========== HEADER SECTION ========== */
+
+/* Header section with gradient background */
+#head {
+    background: linear-gradient(120deg, #0077cc, #00c6ff);
+    color: white;
+    padding: 80px 0;
+    text-align: center;
+}
+
+/* Large heading text */
+.head h1 {
+    font-size: 3rem;
+    margin-top: 10px;
+}
+
+/* Emphasize part of the name with a different color */
+.head h1 span {
+    color: #fce38a;
+}
+
+/* ========== ABOUT SECTION ========== */
+
+/* Flex container for About section */
+#about .row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 30px;
+}
+
+/* Column 1: User image */
+.about-col-1 {
+    flex: 1;
+    text-align: center;
+}
+
+/* Style the user image */
+.about-col-1 img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Column 2: About text content */
+.about-col-2 {
+    flex: 2;
+}
+
+/* Section title */
+.sub-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #0077cc;
+}
+
+/* Tab links for skills, experience, education */
+.tab-title {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* Individual tab link */
+.tab {
+    cursor: pointer;
+    padding-bottom: 5px;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s;
+    font-weight: 600;
+}
+
+/* Active tab highlight */
+.tab.active-link {
+    color: #0077cc;
+    border-color: #0077cc;
+}
+
+/* Hide inactive tab content */
+.tab-contents {
+    display: none;
+    margin-top: 20px;
+}
+
+/* Show active tab content */
+.tab-contents.active-tab {
+    display: block;
+}
+
+/* ========== CONTACT SECTION ========== */
+
+/* Flex container for contact section */
+#contact .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+/* Left side: contact info */
+.contact-left, 
+.contact-right {
+    flex: 1;
+}
+
+/* Contact text info (email, phone) */
+.contact-left p {
+    margin: 10px 0;
+    font-size: 1rem;
+}
+
+/* Social media icon container */
+.social-icons {
+    margin: 20px 0;
+}
+
+/* Style social icons */
+.social-icons a {
+    font-size: 1.5rem;
+    margin-right: 15px;
+    color: #0077cc;
+    transition: transform 0.3s, color 0.3s;
+}
+
+/* Hover effect for icons */
+.social-icons a:hover {
+    color: #005fa3;
+    transform: scale(1.2);
+}
+
+/* Download button styling */
+.btn {
+    background-color: #0077cc;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Button hover effect */
+.btn:hover {
+    background-color: #005fa3;
+}
+
+/* ========== CONTACT FORM STYLING ========== */
+
+/* Form structure */
+.contact-right form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Input fields and textarea */
+form input,
+form textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    resize: none;
+}
+
+/* Submit button */
+form button {
+    background-color: #005fa3:
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Submit button hover */
+form button:hover {
+    background-color: #005fa3;
+}
+
+/* ========== RESPONSIVE STYLES ========== */
+
+/* Responsive styles for screens smaller than 768px */
+@media (max-width: 768px) {
+    /* Stack nav items vertically */
+    nav ul {
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 10px;
+    }
+
+    /* Stack rows in sections */
+    #about .row,
+    #contact .row {
+        flex-direction: column;
+    }
+
+    /* Reduce heading size on small screens */
+    .head h1 {
+        font-size: 2rem;
+    }
+}

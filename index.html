@@ -1,0 +1,119 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="/style.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<script>
+    function opentab(tabName, event) {
+        const tabLinks = document.querySelectorAll(".tab");
+        const tabContents = document.querySelectorAll(".tab-contents");
+
+        // Remove active classes from all tabs and contents
+        tabLinks.forEach(tab => tab.classList.remove("active-link"));
+        tabContents.forEach(content => content.classList.remove("active-tab"));
+
+        // Add to the clicked tab and corresponding content
+        event.target.classList.add("active-link");
+        document.getElementById(tabName.toLowerCase()).classList.add("active-tab");
+    }
+</script>
+<body>
+    <div id="head">
+        <div class="container">
+            <nav>
+    <ul>
+        <li><a href="#head">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+    </ul>
+</nav>
+
+            <div class="head">
+                <p>Hello, I'm</p>
+                <h1>Amina Badar <span>ALJabri</span></h1>
+            </div>
+        </div>
+    </div>
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="/user.webp" alt="User Image" />
+                </div> 
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>
+                        I am Amina ALJabri, 25 years old, living in Muscat. 
+                        I graduated from the Arab Open University with a bachelor's degree 
+                        in Information Technology and Computing.
+                    </p>
+
+                    <div class="tab-title">
+                        <p class="tab links active-link" onclick="opentab('skills', event)">Skills</p>
+                        <p class="tab links" onclick="opentab('experience', event)">Experience</p>
+                        <p class="tab links" onclick="opentab('education', event)">Education</p> 
+                    </div>
+
+                    <div class="tab-contents active-tab" id="skills">      
+                        <p>Use computer</p>
+                        <p>Management skills</p>
+                        <p>Use of Microsoft programs</p>
+                    </div>
+
+                    <div class="tab-contents" id="experience"> 
+                        <p>training at Health Ministry</p>
+                    
+                    </div>
+
+                    <div class="tab-contents" id="education">
+                        <p>Bachelor's in Information and Computing at AOU</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1> 
+                    <p><i class="fa fa-paper-plane"></i> amooat2001@gmail.com</p>
+                    <p><i class="fa fa-phone"></i> 95995650</p>
+                    <div class="social-icons">
+                        <a href="#" class="fa fa-facebook"></a>
+                        <a href="#" class="fa fa-instagram"></a>
+                    </div>
+                    <button class="btn" style="width:100%">
+                        <a href="/CV Amina .pdf" class="button button2" target="_blank">Download CV</a>
+                    </button>
+                </div>
+
+                <div class="contact-right">
+                
+<form 
+action="https://formsubmit.co/amooat2001@gmail.com" method="POST">
+     <input type="text" name="Name" placeholder="Your Name" required>
+     <input type="hidden" name="-subject" value="New Email">
+     <input type="email" name="email"  placeholder="Email Address" required>
+     <input type="text" name="massage placeholder="write your massage required>
+     <input type="hidden" name="-captcha" value="false">
+     <button type="submit">Submit</button>
+</form>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
